@@ -3,234 +3,341 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    
+    <title>Contact Me - Portfolio</title>
+    <!-- Bootstrap 5.3.3 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap Icons CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .glass-bg {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .container-contact {
+            margin-top: 120px;
+        }
+        
+        /* Glassmorphism Contact Info Card */
+        .contact-info-card {
+            background: rgba(255, 255, 255, 0.03) !important;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08) !important;
+            border-radius: 15px !important;
+            padding: 30px;
+        }
+        
+        /* Icon and Text Styling */
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        .info-item i {
+            font-size: 1.5rem;
+            color: #B2C9AB;
+            margin-right: 15px;
+            margin-top: 2px;
+        }
+        .info-item h6 {
+            font-weight: 600;
+            margin-bottom: 3px;
+            color: #fff;
+        }
+        .info-item p, .info-item a {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            margin-bottom: 0;
+            text-decoration: none;
+        }
+        .info-item a:hover {
+            color: #B2C9AB;
+        }
+        
+        /* Modern Form Inputs */
+        .custom-input {
+            background: rgba(255, 255, 255, 0.03) !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            color: #fff !important;
+            border-radius: 8px !important;
+            padding: 12px 15px;
+            transition: all 0.3s ease;
+        }
+        .custom-input:focus {
+            border-color: rgba(178, 201, 171, 0.5) !important;
+            box-shadow: 0 0 0 0.25rem rgba(178, 201, 171, 0.15) !important;
+        }
+        .custom-input::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
+        
+        /* Button & Form Accents */
+        .btn-sage {
+            background-color: #B2C9AB !important;
+            border-color: #B2C9AB !important;
+            color: #121212 !important;
+            font-weight: 600;
+            padding: 10px 25px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .btn-sage:hover {
+            background-color: #9cb395 !important;
+            transform: translateY(-2px);
+        }
+        .form-check-input:checked {
+            background-color: #B2C9AB !important;
+            border-color: #B2C9AB !important;
+        }
+        
+        /* Smooth Map Section */
+        .map-wrapper {
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        /* Modern Dropdown Adjustments */
+        .dropdown-menu {
+            background: #1a1a1a !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        }
+        .dropdown-item {
+            color: rgba(255, 255, 255, 0.8) !important;
+        }
+        .dropdown-item:hover {
+            background: rgba(178, 201, 171, 0.1) !important;
+            color: #B2C9AB !important;
+        }
+    </style>
 </head>
-<body class="body-contact"> 
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark glass-bg ">
+<body>
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark glass-bg">
         <div class="container">
-            <a class="navbar-brand" href="#">DD</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand fw-bold" href="#" style="color: #B2C9AB;">DD</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse text-white " id="navbarNav">
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link  " href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="portofolio.html">Portofolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="contact.html">Contact</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="portofolio.html">Portofolio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-<section class="container container-contact text-white" style="margin-bottom: 10%;">
-    <div class="container ">
-        <h1 class="text-center mb-5">Contact Me</h1>
-        <div class="row">
-            <div class="col-md-4 text-start bg-success p-2 text-white custom-input " >
-                <h3>Contact Information</h3>
-                <div>
-                    <h6>Location</h6>
-                    <p style="margin-left: 13px;">Padang, Limau Manis</p>
-                </div>
-                <div>
-                    <h6>Email</h6>
-                    <p style="margin-left: 13px;">ddbinntang19@gmail.com</p>
-                </div>
-                <div>
-                    <h6>Telephone</h6>
-                    <p style="margin-left: 13px;">+62822113344</p>
-                </div>
-                <div>
-                    <h6>Instagram</h6>
-                    <p style="margin-left: 13px;"><a href="https://www.instagram.com/dd2_augh/" class="text-white">dd2_augh</a></p>
-                </div>        
-            </div>
-            <div class="col-md-8">
-                <h3 class="mb-4 mt-2 text-white">Get in Touch</h3> 
-                    <form class="needs-validation" novalidate>      
-                    <div class="mb-3">
-                        <input type="text" class="form-control glass-bg text-light custom-input" id="name" placeholder="Full Name" required>
-                        <div class="invalid-feedback">
-                            Mohon masukkan nama lengkap Anda.
-                        </div>
-                    </div>      
-                    <div class="mb-3">
-                        <input type="email" class="form-control custom-input text-light glass-bg" id="email" placeholder="name@example.com" required>
-                        <div class="invalid-feedback">
-                            Mohon masukkan alamat email yang valid.
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <input type="tel" class="form-control custom-input text-light glass-bg" id="phone" placeholder="Phone Number" required pattern="[0-9]{10,14}">
-                        <div class="invalid-feedback">
-                            Mohon masukkan nomor telepon (10-14 digit angka).
-                        </div>
-                    </div>  
 
-                    <div class="mb-3 dropdown-wrapper"> 
-                        <button class="btn btn-secondary dropdown-toggle form-control text-start glass-bg dropdown-full-width custom-input" 
-                                type="button" 
-                                id="serviceDropdownButton" 
-                                data-bs-toggle="dropdown" 
-                                aria-expanded="false"
-                                data-bs-auto-close="true" >
-                            Pilih Layanan 
-                        </button>  
-                            <input type="hidden" name="service_selection" id="serviceSelectionHidden" required>
-                        <div class="invalid-feedback" id="dropdownFeedback">
-                            Mohon pilih salah satu layanan.
+    <!-- Contact Content Section -->
+    <section class="container container-contact text-white mb-5">
+        <div class="container">
+            <h1 class="text-center fw-semibold mb-5">Contact Me</h1>
+            <div class="row g-4">
+                
+                <!-- Contact Information Column -->
+                <div class="col-md-4">
+                    <div class="contact-info-card h-100">
+                        <h3 class="mb-4 fw-semibold" style="color: #B2C9AB; font-size: 1.4rem;">Contact Info</h3>
+                        
+                        <div class="info-item">
+                            <i class="bi bi-geo-alt"></i>
+                            <div>
+                                <h6>Location</h6>
+                                <p>Padang, Limau Manis</p>
+                            </div>
                         </div>
-                        <ul class="dropdown-menu dropdown-full-width">
-                            <li><a class="dropdown-item select-service-item" href="#" data-value="Network">Network</a></li>
-                            <li><a class="dropdown-item select-service-item" href="#" data-value="UI/UX Design">UI/UX Design</a></li>
-                            <li><a class="dropdown-item select-service-item" href="#" data-value="Cisco/Jaringan">Cisco/Jaringan</a></li>
-                        </ul>
+                        
+                        <div class="info-item">
+                            <i class="bi bi-envelope"></i>
+                            <div>
+                                <h6>Email</h6>
+                                <p>ddbinntang19@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class="bi bi-telephone"></i>
+                            <div>
+                                <h6>Telephone</h6>
+                                <p>+62822113344</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class="bi bi-instagram"></i>
+                            <div>
+                                <h6>Instagram</h6>
+                                <p><a href="https://www.instagram.com/dd2_augh/" target="_blank">@dd2_augh</a></p>
+                            </div>
+                        </div>        
                     </div>
-                <div class="mb-3">
-                    <textarea class="form-control glass-bg text-light custom-input" id="message" rows="3" placeholder="Pesan" required></textarea>
-                    <div class="invalid-feedback">Mohon masukkan pesan Anda.</div>
                 </div>
-                <div class="form-check form-switch mb-3">
-                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                    <label class="form-check-label text-white" for="flexSwitchCheckDefault">Saya setuju menerima berita terbaru.</label>
+                
+                <!-- Form Interaction Column -->
+                <div class="col-md-8">
+                    <div class="contact-info-card">
+                        <h3 class="mb-4 fw-semibold" style="font-size: 1.4rem;">Get in Touch</h3> 
+                        <form class="needs-validation" novalidate>      
+                            <div class="mb-3">
+                                <input type="text" class="form-control custom-input" id="name" placeholder="Full Name" required>
+                                <div class="invalid-feedback">Mohon masukkan nama lengkap Anda.</div>
+                            </div>      
+                            <div class="mb-3">
+                                <input type="email" class="form-control custom-input" id="email" placeholder="name@example.com" required>
+                                <div class="invalid-feedback">Mohon masukkan alamat email yang valid.</div>
+                            </div>
+                            <div class="mb-3">
+                                <input type="tel" class="form-control custom-input" id="phone" placeholder="Phone Number" required pattern="[0-9]{10,14}">
+                                <div class="invalid-feedback">Mohon masukkan nomor telepon (10-14 digit angka).</div>
+                            </div>  
+
+                            <div class="mb-3 dropdown-wrapper"> 
+                                <button class="btn btn-secondary dropdown-toggle form-control text-start custom-input" 
+                                        type="button" 
+                                        id="serviceDropdownButton" 
+                                        data-bs-toggle="dropdown" 
+                                        aria-expanded="false"
+                                        data-bs-auto-close="true">
+                                    Pilih Layanan 
+                                </button>  
+                                <input type="hidden" name="service_selection" id="serviceSelectionHidden" required>
+                                <div class="invalid-feedback" id="dropdownFeedback">Mohon pilih salah satu layanan.</div>
+                                <ul class="dropdown-menu w-100">
+                                    <li><a class="dropdown-item select-service-item" href="#" data-value="Network">Network</a></li>
+                                    <li><a class="dropdown-item select-service-item" href="#" data-value="UI/UX Design">UI/UX Design</a></li>
+                                    <li><a class="dropdown-item select-service-item" href="#" data-value="Cisco/Jaringan">Cisco/Jaringan</a></li>
+                                </ul>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control custom-input" id="message" rows="4" placeholder="Pesan" required></textarea>
+                                <div class="invalid-feedback">Mohon masukkan pesan Anda.</div>
+                            </div>
+                            <div class="form-check form-switch mb-4">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <label class="form-check-label text-white-50 small" for="flexSwitchCheckDefault">Saya setuju menerima berita terbaru.</label>
+                            </div>
+                            <button type="submit" class="btn btn-sage w-100">Kirim Pesan</button>
+                        </form>
+                    </div>
                 </div>
-                    <button type="submit" class="btn btn-warning mt-3">Kirim Pesan</button>
-                </form>
+            </div>
+            
+            <!-- Map Integration Display -->
+            <div class="row mt-5 pt-4">
+                <h4 class="text-center mb-4 fw-semibold" style="letter-spacing: 1px;">Lokasi Saya</h4>
+                <div class="col-12 map-wrapper p-0">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9489.30636056925!2d100.36988237717068!3d-0.3048373970758638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd538bd1ff164a7%3A0xcea33881870dc19!2sJam%20Gadang%20Bukittinggi!5e0!3m2!1sid!2sid!4v1765524579785!5m2!1sid!2sid" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
         </div>
-    <div class="row mt-4" style="margin-top: 10%;">
-        <p class="text-center m-3 p-3" >Lokasi Saya</p>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9489.30636056925!2d100.36988237717068!3d-0.3048373970758638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd538bd1ff164a7%3A0xcea33881870dc19!2sJam%20Gadang%20Bukittinggi!5e0!3m2!1sid!2sid!4v1765524579785!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    </div>
-</div>
-</section>
+    </section>
 
-<footer class=" text-white pt-5 pb-3 border-top glass-bg">
-    <div class="container">
-        <div class="row">
-            
-            <div class="col-lg-4 col-md-6 mb-4 text-start">
-                <h5 class="fw-bold text-white">DD Portfolio</h5>
-                                <p class=" small" style="color: white;">Website portofolio Dede Bintang Gafend, mahasiswa Informatika Universitas Andalas</p>
-
-            </div>
-            
-            <div class="col-lg-3 col-md-6 mb-4 text-start">
-                <h5 class="fw-bold">Navigasi Cepat</h5>
-                <ul class="list-unstyled">
-                    <li><a href="index.html" class="text-white-50 text-decoration-none">Home</a></li>
-                    <li><a href="about.html" class="text-white-50 text-decoration-none">About</a></li>
-                    <li><a href="portofolio.html" class="text-white-50 text-decoration-none">Portofolio</a></li>
-                    <li><a href="contact.html" class="text-white-50 text-decoration-none">Contact</a></li>
-                </ul>
-            </div>
-            
-            <div class="col-lg-5 col-md-12 mb-4 text-center">
-                <h5 class="fw-bold">Let's Connect</h5>
-                <div class="d-flex justify-content-center">
-                    <a href="https://www.instagram.com/dd2_augh/" target="_blank" class="text-white me-3 fs-4 text-decoration-none d-inline-block">
-                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
-                        </svg>
-                    </a>
-
-                    <a href="https://github.com/DD-Bin/Tugas-3_DesainWeb_Dede-Bintang-Gafendi_2411533010" target="_blank" class="text-white me-3 fs-4 text-decoration-none d-inline-block">
-                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
-                        </svg>
-                    </a>
+    <!-- Footer Area Section -->
+    <footer class="text-white pt-5 pb-3 border-top glass-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 mb-4 text-start">
+                    <h5 class="fw-bold" style="color: #B2C9AB;">DD Portfolio</h5>
+                    <p class="small text-white-50">Website portofolio Dede Bintang Gafendi, mahasiswa Informatika Universitas Andalas</p>
                 </div>
-            </div> 
+                <div class="col-lg-6 col-md-6 mb-4 text-md-end text-start">
+                    <h5 class="fw-bold">Let's Connect</h5>
+                    <div class="d-flex justify-content-md-end justify-content-start mt-2">
+                        <a href="https://www.instagram.com/dd2_augh/" target="_blank" class="text-white me-3 fs-4 text-decoration-none">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://github.com/DD-Bin/Tugas-3_DesainWeb_Dede-Bintang-Gafendi_2411533010" target="_blank" class="text-white fs-4 text-decoration-none">
+                            <i class="bi bi-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center pt-3 border-top border-secondary">
+                <p class="small mb-0 text-white opacity-75">© 2025 Created with love by Dede Bintang Gafendi 💀</p>
+            </div>
         </div>
-        <div class="text-center pt-3 border-top border-secondary">
-            <p class="small mb-0 text-white opacity-75">© 2025 Created with love by Dede Bintang Gafendi 💀</p>
+    </footer>
+
+    <!-- Status Alert Toast Feedback -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="successToast" class="toast text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="5000">
+            <div class="toast-header bg-success text-white border-0">
+                <strong class="me-auto"><i class="bi bi-check-circle-fill me-2"></i>Pesan Terkirim</strong>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body bg-success rounded-bottom text-white opacity-90">
+                Terima kasih! Pesan Anda telah berhasil dikirim.
+            </div>
         </div>
     </div>
-</footer>
 
-<div class="toast-container position-fixed bottom-0 end-0 p-3">
-    <div div id="successToast" class="toast text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="5000">
-        <div class="toast-header bg-success text-white">
-            <strong class="me-auto">Pesan Terkirim</strong>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
-        </div>
-        <div class="toast-body">
-            Terima kasih! Pesan Anda telah berhasil dikirim.
-        </div>
-    </div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    'use strict';
-    const dropdownButton = document.getElementById('serviceDropdownButton');
-    const hiddenInput = document.getElementById('serviceSelectionHidden');
-    const menuItems = document.querySelectorAll('.select-service-item');
+    <!-- Script Processing Infrastructure -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        'use strict';
+        const dropdownButton = document.getElementById('serviceDropdownButton');
+        const hiddenInput = document.getElementById('serviceSelectionHidden');
+        const menuItems = document.querySelectorAll('.select-service-item');
 
-    if (dropdownButton && hiddenInput && menuItems.length > 0) {
-        menuItems.forEach(item => {
-            item.addEventListener('click', function(e) {
-                e.preventDefault();                
-                const selectedText = this.textContent;
-                dropdownButton.textContent = selectedText;
-                hiddenInput.value = selectedText;                 
-                hiddenInput.classList.remove('is-invalid');
-                hiddenInput.classList.add('is-valid');    
-                dropdownButton.classList.remove('is-invalid');
-                dropdownButton.classList.add('is-valid');
+        if (dropdownButton && hiddenInput && menuItems.length > 0) {
+            menuItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();                
+                    const selectedText = this.textContent;
+                    dropdownButton.textContent = selectedText;
+                    hiddenInput.value = selectedText;                 
+                    hiddenInput.classList.remove('is-invalid');
+                    hiddenInput.classList.add('is-valid');    
+                    dropdownButton.classList.remove('is-invalid');
+                    dropdownButton.classList.add('is-valid');
+                });
             });
-        });
-    }
-    const successToastEl = document.getElementById('successToast');
-    const successToast = new bootstrap.Toast(successToastEl); 
+        }
 
-    (function () {
-        const forms = document.querySelectorAll('.needs-validation'); 
-        
-        Array.prototype.slice.call(forms)
-        .forEach(function (form) {
-            form.addEventListener('submit', function (event) {
-                if (!form.checkValidity()) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                    if (!hiddenInput.value) {
-                         dropdownButton.classList.add('is-invalid');
-                         dropdownButton.classList.remove('is-valid');
-                    }
+        const successToastEl = document.getElementById('successToast');
+        const successToast = new bootstrap.Toast(successToastEl); 
 
-                } else {
-                    event.preventDefault(); 
-                    event.stopPropagation();
-                    successToast.show(); 
-                    form.reset(); 
-                    form.classList.remove('was-validated'); 
-                    dropdownButton.textContent = 'Pilih Layanan';
-                    dropdownButton.classList.remove('is-valid');
-                    hiddenInput.classList.remove('is-valid');
-                    hiddenInput.value = '';
-                } 
-                form.classList.add('was-validated');
-            }, false)
-        })
-    })();
-</script>
-</script>
-
-
+        (function () {
+            const forms = document.querySelectorAll('.needs-validation'); 
+            
+            Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        if (!hiddenInput.value) {
+                             dropdownButton.classList.add('is-invalid');
+                             dropdownButton.classList.remove('is-valid');
+                        }
+                    } else {
+                        event.preventDefault(); 
+                        event.stopPropagation();
+                        successToast.show(); 
+                        form.reset(); 
+                        form.classList.remove('was-validated'); 
+                        dropdownButton.textContent = 'Pilih Layanan';
+                        dropdownButton.classList.remove('is-valid');
+                        hiddenInput.classList.remove('is-valid');
+                        hiddenInput.value = '';
+                    } 
+                    form.classList.add('was-validated');
+                }, false)
+            })
+        })();
+    </script>
 </body>
 </html>
