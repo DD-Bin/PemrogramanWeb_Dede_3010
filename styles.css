@@ -5,6 +5,11 @@
     border: 1px solid red; 
 } */
 
+.btn-outline-light:hover .bi-github {
+    color: #B2C9AB;
+    transition: color 0.3s ease;
+}
+
 .badge-mobile {
     background-color: rgba(130, 177, 255, 0.2);
     color: #82b1ff;
