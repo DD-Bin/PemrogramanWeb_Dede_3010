@@ -206,24 +206,56 @@
                 
                 <div class="row justify-content-center">
                     <div class="col-lg-8 step-container text-center">
-                        <h6 class="fw-bold text-light text-start">Ikon Pengaturan di AppBar</h6>
-                        <p class="text-light opacity-75 small text-start">Modifikasi pada AppBar HomePage dengan menambahkan ikon pengaturan (Icons.settings) di sebelah ikon badge favorit untuk mengakses halaman pengaturan tema.</p>
+                        <h6 class="fw-bold text-light text-start">Membangun Provider Tema Baru</h6>
+                        <p class="text-light opacity-75 small text-start">Pembuatan file <code>theme_provider.dart</code> yang mewarisi class ChangeNotifier. Kelas ini bertugas menyimpan status mode tampilan aplikasi (terang/gelap) yang secara default diinisialisasi sebagai ThemeMode.light.</p>
+                        <img src="gambar/praktikum App Mobile 6/CodeLatihan1.png" class="img-fluid img-screenshot w-75" alt="Theme Provider">
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 step-container text-center">
+                        <h6 class="fw-bold text-light text-start">Merancang UI Halaman Pengaturan</h6>
+                        <p class="text-light opacity-75 small text-start">Pembuatan antarmuka <code>settings_page.dart</code> menggunakan Stateless Widget. Di dalamnya disematkan komponen SwitchListTile yang mendengarkan (watch) status tema, serta memanggil fungsi pembalik tema (toggleTheme) apabila *switch* ditekan pengguna.</p>
+                        <img src="gambar/praktikum App Mobile 6/CodeLatihan1b.png" class="img-fluid img-screenshot w-75" alt="Halaman Pengaturan UI">
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 step-container text-center">
+                        <h6 class="fw-bold text-light text-start">Mendaftarkan Provider di Main</h6>
+                        <p class="text-light opacity-75 small text-start">Penyesuaian pada file <code>main.dart</code>. Provider tema yang telah dibuat kemudian diimpor dan didaftarkan ke dalam MultiProvider, lalu variabel themeMode milik MaterialApp diikat agar bereaksi dengan status dari ThemeProvider tersebut.</p>
+                        <img src="gambar/praktikum App Mobile 6/CodeLatihan1c.png" class="img-fluid img-screenshot w-75" alt="Registrasi Provider di Main">
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 step-container text-center">
+                        <h6 class="fw-bold text-light text-start">Kaitkan Halaman Pengaturan ke Navigasi</h6>
+                        <p class="text-light opacity-75 small text-start">Modifikasi pada <code>home_page.dart</code> untuk menyematkan ikon gerigi (Settings) pada sisi kanan AppBar, sehingga memberikan pengguna akses interaktif menuju layar kontrol mode gelap yang telah dibuat.</p>
+                        <img src="gambar/praktikum App Mobile 6/CodeLatihan1d.png" class="img-fluid img-screenshot w-75" alt="Tombol Pengaturan di Home">
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 step-container text-center">
+                        <h6 class="fw-bold text-light text-start">Hasil Ikon Pengaturan di AppBar</h6>
+                        <p class="text-light opacity-75 small text-start">Potret antarmuka HomePage yang kini menampilkan ikon pengaturan (Icons.settings) bersebelahan dengan ikon badge notifikasi favorit.</p>
                         <img src="gambar/praktikum App Mobile 6/Latihan1.png" class="img-fluid img-screenshot w-100" alt="Ikon Pengaturan">
                     </div>
                 </div>
 
                 <div class="row justify-content-center">
                     <div class="col-lg-8 step-container text-center">
-                        <h6 class="fw-bold text-light text-start">Halaman Pengaturan (SwitchListTile)</h6>
-                        <p class="text-light opacity-75 small text-start">Tampilan halaman Pengaturan yang memuat sebuah SwitchListTile untuk mode gelap. Saat switch diaktifkan, state tema diperbarui melalui ThemeProvider menggunakan fungsi notifyListeners().</p>
+                        <h6 class="fw-bold text-light text-start">Hasil Interaksi Halaman Pengaturan</h6>
+                        <p class="text-light opacity-75 small text-start">Tampilan fungsional halaman Pengaturan. Saat switch 'Mode Gelap' diaktifkan, state tema diperbarui melalui ThemeProvider menggunakan fungsi notifyListeners(), mengubah nuansa layar seketika.</p>
                         <img src="gambar/praktikum App Mobile 6/Latihan1b.png" class="img-fluid img-screenshot w-100" alt="Halaman Pengaturan">
                     </div>
                 </div>
 
                 <div class="row justify-content-center">
                     <div class="col-lg-8 step-container text-center border-0">
-                        <h6 class="fw-bold text-light text-start">Implementasi Dark Mode</h6>
-                        <p class="text-light opacity-75 small text-start">Tampilan aplikasi yang telah berubah sepenuhnya ke mode gelap (Dark Mode). Hal ini karena parameter themeMode pada MaterialApp dibuat bereaksi terhadap perubahan data dari ThemeProvider.</p>
+                        <h6 class="fw-bold text-light text-start">Implementasi Dark Mode Menyeluruh</h6>
+                        <p class="text-light opacity-75 small text-start">Tampilan keseluruhan aplikasi yang telah bereaksi secara dinamis. Daftar resep kini sepenuhnya dibalut dalam tema warna gelap (Dark Mode).</p>
                         <img src="gambar/praktikum App Mobile 6/Latihan1c.png" class="img-fluid img-screenshot w-100" alt="Dark Mode">
                     </div>
                 </div>
@@ -235,8 +267,16 @@
                 
                 <div class="row justify-content-center">
                     <div class="col-lg-8 step-container text-center">
-                        <h6 class="fw-bold text-light text-start">Tombol Hapus Massal</h6>
-                        <p class="text-light opacity-75 small text-start">Penambahan ikon tempat sampah di AppBar halaman Favorit. Tombol ini memiliki logika untuk dinonaktifkan secara otomatis jika daftar favorit kosong.</p>
+                        <h6 class="fw-bold text-light text-start">Pembuatan Logika Penghapusan Massal</h6>
+                        <p class="text-light opacity-75 small text-start">Modifikasi di dalam file <code>favorite_page.dart</code>. Widget IconButton tambahan dimasukkan ke area actions pada AppBar. Tombol ini diprogram untuk merender pop-up AlertDialog yang menampung instruksi 'read' menuju fungsi clear() milik FavoriteProvider.</p>
+                        <img src="gambar/praktikum App Mobile 6/CodeLatihan2.png" class="img-fluid img-screenshot w-75" alt="Logika Hapus Semua">
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 step-container text-center">
+                        <h6 class="fw-bold text-light text-start">Tombol Hapus Terpasang</h6>
+                        <p class="text-light opacity-75 small text-start">Penambahan ikon tempat sampah di sudut kanan AppBar halaman Favorit. Tombol ini memiliki pengaman logika untuk dinonaktifkan (disable) secara otomatis jika daftar favorit kosong (count == 0).</p>
                         <img src="gambar/praktikum App Mobile 6/Latihan2.png" class="img-fluid img-screenshot w-100" alt="Tombol Hapus Semua Favorit">
                     </div>
                 </div>
@@ -244,7 +284,7 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-8 step-container text-center border-0">
                         <h6 class="fw-bold text-light text-start">Dialog Konfirmasi Penghapusan</h6>
-                        <p class="text-light opacity-75 small text-start">Munculnya dialog konfirmasi (AlertDialog) saat tombol hapus semua ditekan, memastikan pengguna yakin sebelum fungsi clear() dari FavoriteProvider dieksekusi untuk mengosongkan daftar.</p>
+                        <p class="text-light opacity-75 small text-start">Munculnya dialog konfirmasi (AlertDialog) saat tombol hapus semua ditekan, bertugas memastikan pengguna tidak keliru sebelum daftar favorit dikosongkan secara bersih dari memori.</p>
                         <img src="gambar/praktikum App Mobile 6/Latihan2b.png" class="img-fluid img-screenshot w-100" alt="Dialog Konfirmasi Hapus">
                     </div>
                 </div>
